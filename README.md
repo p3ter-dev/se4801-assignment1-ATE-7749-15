@@ -125,7 +125,7 @@ Once connected, run `SHOW TABLES;` to confirm that Hibernate created the `catego
 The application includes a `DataSeeder` class that automatically inserts sample data every time the application starts. On startup you will see this message in the console:
 
 ```
-     Data seeded successfully — 2 categories, 3 products.
+     Data seeded successfully.
 ```
 
 The seeder creates two categories (Electronics and Clothing) and three products (Laptop Pro 15, Wireless Headphones, and Running Shoes), so you can start testing the API endpoints immediately without manually inserting data.
