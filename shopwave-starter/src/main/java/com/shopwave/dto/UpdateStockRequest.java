@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UpdateStockRequest {
-
     @NotNull(message = "Delta value is required")
     private Integer delta;
 }
