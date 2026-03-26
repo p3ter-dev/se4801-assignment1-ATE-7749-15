@@ -22,7 +22,7 @@ public class CreateProductRequest {
     @NotBlank(message = "Product name is required")
     private String name;
 
-    private String description; // optional
+    private String description;
 
     @NotNull(message = "Price is required")
     @Positive(message = "Price must be greater than zero")
