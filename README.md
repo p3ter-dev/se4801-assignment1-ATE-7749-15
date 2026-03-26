@@ -59,7 +59,7 @@ mvn clean package -DskipTests
 
 ## How to Run the Application
 
-### Option 1 — Using the Spring Boot Maven Plugin (recommended for development)
+### Option 1: Using the Spring Boot Maven Plugin (recommended for development)
 
 ```bash
 mvn spring-boot:run
@@ -73,7 +73,7 @@ Started ShopWaveApplication in 2.345 seconds (process running for 3.1)
 
 Once you see that line, the application is fully running and ready to accept requests on port 8080.
 
-### Option 2 — Running the compiled JAR directly
+### Option 2: Running the compiled JAR directly
 
 First build the JAR (if you have not already):
 
@@ -89,7 +89,7 @@ java -jar target/shopwave-starter-0.0.1-SNAPSHOT.jar
 
 This is how you would run the application in a production or CI/CD environment.
 
-### Option 3 — Running from IntelliJ IDEA
+### Option 3: Running from IntelliJ IDEA
 
 Open the project in IntelliJ, navigate to `src/main/java/com/shopwave/ShopWaveApplication.java`, and click the green play button next to the `main()` method. IntelliJ will compile and launch the application automatically.
 
@@ -136,7 +136,7 @@ The seeder creates two categories (Electronics and Clothing) and three products 
 
 The base URL for all endpoints is `http://localhost:8080/api`.
 
-### GET /api/products — Paginated product list
+### GET /api/products: Paginated product list
 
 ```bash
 curl "http://localhost:8080/api/products?page=0&size=10"
@@ -144,7 +144,7 @@ curl "http://localhost:8080/api/products?page=0&size=10"
 
 Returns a `Page<ProductDTO>` object containing the products for the requested page along with pagination metadata (total pages, total elements, etc.).
 
-### GET /api/products/{id} — Single product by ID
+### GET /api/products/{id}: Single product by ID
 
 ```bash
 curl "http://localhost:8080/api/products/1"
@@ -152,7 +152,7 @@ curl "http://localhost:8080/api/products/1"
 
 Returns a single `ProductDTO` if the product exists, or a structured `404 Not Found` JSON error if it does not.
 
-### POST /api/products — Create a new product
+### POST /api/products: Create a new product
 
 ```bash
 curl -X POST "http://localhost:8080/api/products" \
@@ -168,7 +168,7 @@ curl -X POST "http://localhost:8080/api/products" \
 
 Returns `201 Created` with the newly created `ProductDTO`. Returns `400 Bad Request` with validation details if the request body violates any constraints (blank name, negative price, etc.).
 
-### GET /api/products/search — Search by keyword and/or max price
+### GET /api/products/search: Search by keyword and/or max price
 
 ```bash
 # Search by keyword only
@@ -183,7 +183,7 @@ curl "http://localhost:8080/api/products/search?keyword=head&maxPrice=300"
 
 Both query parameters are optional. Returns `200 OK` with a `List<ProductDTO>`.
 
-### PATCH /api/products/{id}/stock — Update product stock
+### PATCH /api/products/{id}/stock: Update product stock
 
 ```bash
 # Reduce stock by 5 (sale)
