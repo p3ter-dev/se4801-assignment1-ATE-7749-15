@@ -1,6 +1,6 @@
 # ShopWave-Starter
 
-**SE-4801: Enterprise Application Development: Assignment 1**
+**SECT-4221: Enterprise Application Development: Assignment 1**
 
 **Name:** Peter Kinfe <br/>
 **ID:** ATE/7749/15
