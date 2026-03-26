@@ -41,10 +41,9 @@ public class ProductController {
     @PostMapping("/products")
     public ResponseEntity<ProductDTO> createProduct(
             @Valid @RequestBody CreateProductRequest request) {
-
         ProductDTO created = productService.createProduct(request);
         return ResponseEntity
-                .status(HttpStatus.CREATED)  // 201, not 200
+                .status(HttpStatus.CREATED)
                 .body(created);
     }
 
@@ -53,7 +52,6 @@ public class ProductController {
     public ResponseEntity<List<ProductDTO>> searchProducts(
             @RequestParam(required = false) String keyword,
             @RequestParam(required = false) BigDecimal maxPrice) {
-
         List<ProductDTO> results = productService.searchProducts(keyword, maxPrice);
         return ResponseEntity.ok(results);
     }
@@ -63,7 +61,6 @@ public class ProductController {
     public ResponseEntity<ProductDTO> updateStock(
             @PathVariable Long id,
             @Valid @RequestBody UpdateStockRequest request) {
-
         ProductDTO updated = productService.updateStock(id, request.getDelta());
         return ResponseEntity.ok(updated);
     }
